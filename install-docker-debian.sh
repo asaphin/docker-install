@@ -17,8 +17,7 @@ apt-get update
 apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 groupadd docker
-usermod -aG docker $USER
-newgrp docker
+usermod -a -G docker $USER
 
 systemctl enable docker.service
 systemctl enable containerd.service
